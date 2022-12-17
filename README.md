@@ -1,3 +1,5 @@
+스마트폰 전체화면 시계
+
 This favicon was generated using the following font:
 
 - Font Title: Do Hyeon
