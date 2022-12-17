@@ -27,9 +27,9 @@ $date.innerText = new Intl.DateTimeFormat("ko-KR", {
     $hour.innerText = date.getHours().toString().padStart(2, "0");
   }
   if (recentUpdate.getDate() != date.getDate()) {
-    $date.innerText = `${new Intl.DateTimeFormat("ko-KR", {
+    $date.innerText = new Intl.DateTimeFormat("ko-KR", {
       dateStyle: "full",
-    }).format(date)}`;
+    }).format(date);
   }
   recentUpdate = date;
 
