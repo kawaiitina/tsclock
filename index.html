@@ -2,12 +2,20 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>tsclock</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="favicon.ico" />
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+    <div id="container">
+      <div id="clock">
+        <span id="hour"></span><span id="colon">:</span
+        ><span id="minute"></span>
+        <br />
+      </div>
+      <div id="date"></div>
+    </div>
+    <button id="fullscreen-button">전체화면</button>
+    <script src="main.js"></script>
   </body>
 </html>

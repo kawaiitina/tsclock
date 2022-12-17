@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+}
+#container {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+}
+#clock {
+  width: 100vw;
+  height: 75vh;
+  text-align: center;
+  font-size: 36vw;
+  line-height: 85vh;
+  color: white;
+}
+#colon {
+  line-height: -10vh;
+}
+#date {
+  width: 100vw;
+  height: 25vh;
+  text-align: center;
+  font-size: 7vw;
+  color: white;
+  text-align: center;
+}
+#fullscreen-button {
+  width: 100vw;
+  height: 10vh;
+  font-size: 6vh;
+}
