@@ -10,7 +10,8 @@ body {
   width: 100vw;
   height: 75vh;
   text-align: center;
-  font-size: 36vw;
+  font-family: "Chivo Mono";
+  font-size: 30vw;
   line-height: 85vh;
   color: white;
 }
@@ -26,4 +27,9 @@ body {
   width: 100vw;
   height: 10vh;
   font-size: 6vh;
+}
+
+@font-face {
+  font-family: "Chivo Mono";
+  src: url("ChivoMono-VariableFont_wght.ttf");
 }
