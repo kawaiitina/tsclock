@@ -5,20 +5,26 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: black;
+  display: flex;
+  flex-direction: column;
 }
 #clock {
-  width: 100vw;
+  display: flex;
   height: 75vh;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  font-family: "Chivo Mono";
-  font-size: 30vw;
-  line-height: 85vh;
+  font-family: "Righteous";
+  font-size: 36vw;
   color: white;
 }
+#colon {
+  transform: translate(0, -4.5vw);
+}
 #date {
-  width: 100vw;
   height: 25vh;
   text-align: center;
+  font-family: "Roboto";
   font-size: 7vw;
   color: white;
   text-align: center;
@@ -30,6 +36,10 @@ body {
 }
 
 @font-face {
-  font-family: "Chivo Mono";
-  src: url("ChivoMono-VariableFont_wght.ttf");
+  font-family: "Roboto";
+  src: url("Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: "Righteous";
+  src: url("Righteous-Regular.ttf");
 }

@@ -1,4 +1,5 @@
 const $hour = document.getElementById("hour");
+const $colon = document.getElementById("colon");
 const $minute = document.getElementById("minute");
 const $date = document.getElementById("date");
 const $fullscreenButton = document.getElementById("fullscreen-button");
@@ -18,6 +19,13 @@ $date.innerText = new Intl.DateTimeFormat("ko-KR", {
   }
 
   const date = new Date();
+
+  // if (date.getMilliseconds() < 500) {
+  //   $colon.style.visibility = "";
+  // } else {
+  //   $colon.style.visibility = "hidden";
+  // }
+
   if (recentUpdate.getMinutes() == date.getMinutes()) {
     requestAnimationFrame(update);
     return;
