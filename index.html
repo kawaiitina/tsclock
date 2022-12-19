@@ -62,14 +62,20 @@
             -
           </button>
         </div>
-        <label
-          >콜론 위치<input
-            id="clock-font-size"
-            type="number"
-            v-model.number="colonPosition"
-            @change="changeColonPosition"
-            step="0.1"
-        /></label>
+        <div>
+          <label
+            >콜론 위치<input
+              id="clock-font-size"
+              type="number"
+              v-model.number="colonPosition"
+              @change="changeColonPosition"
+              step="0.1" /></label
+          ><button @click="()=>{colonPosition += 0.1;changeColonPosition() }">
+            +</button
+          ><button @click="()=>{colonPosition -= 0.1;changeColonPosition() }">
+            -
+          </button>
+        </div>
         <label>
           <input type="checkbox" v-model="colonBlink" />콜론(:) 깜빡임
         </label>
