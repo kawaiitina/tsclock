@@ -53,7 +53,7 @@
             >시계 크기<input
               id="clock-font-size"
               type="number"
-              v-model="clockFontSize"
+              v-model.number="clockFontSize"
               @change="changeClockFontSize"
               min="1" /></label
           ><button @click="()=>{clockFontSize += 1;changeClockFontSize() }">
@@ -66,7 +66,7 @@
           >콜론 위치<input
             id="clock-font-size"
             type="number"
-            v-model="colonPosition"
+            v-model.number="colonPosition"
             @change="changeColonPosition"
             step="0.1"
         /></label>
@@ -92,7 +92,7 @@
             >날짜 크기<input
               id="clock-font-size"
               type="number"
-              v-model="dateFontSize.toFixed(1)"
+              v-model.number="dateFontSize.toFixed(1)"
               @change="changeDateFontSize"
               min="1"
               step="0.1" /></label
