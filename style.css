@@ -7,6 +7,9 @@ body {
   background-color: black;
   display: flex;
   flex-direction: column;
+  user-select: none;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
 }
 #clock {
   display: flex;
@@ -14,32 +17,142 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-family: "Righteous";
-  font-size: 36vw;
+  /* font-family: "Righteous"; */
+  /* font-size: 36vw; */
   color: white;
 }
 #colon {
   transform: translate(0, -4.5vw);
 }
+.transparent {
+  opacity: 0;
+}
 #date {
   height: 25vh;
   text-align: center;
-  font-family: "Roboto";
-  font-size: 7vw;
+  /* font-family: "Roboto"; */
+  /* font-size: 7vw; */
   color: white;
   text-align: center;
 }
+#settings {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 5%;
+}
+#settings hr {
+  width: 100%;
+  border-color: rgb(224, 224, 224);
+  border-width: 2px;
+  border-style: solid;
+}
 #fullscreen-button {
-  width: 100vw;
-  height: 10vh;
-  font-size: 6vh;
+  width: 100%;
+  height: 20vh;
+  font-size: 8vh;
+  border: 0;
+  background-color: rgb(240, 240, 240);
+}
+#fullscreen-button:hover {
+  background-color: rgb(224, 224, 224);
+}
+#fullscreen-button:focus {
+  background-color: rgb(192, 192, 192);
+}
+
+.font-2x {
+  font-size: 200%;
+}
+
+.clock-font-label {
+  font-size: 150%;
+  margin: 0.5vw 0;
+  display: block;
 }
 
 @font-face {
-  font-family: "Roboto";
-  src: url("Roboto-Regular.ttf");
+  font-family: "BebasNeue";
+  src: url("fonts/BebasNeue-Regular.ttf");
+}
+@font-face {
+  font-family: "BlackHanSans";
+  src: url("fonts/BlackHanSans-Regular.ttf");
+}
+@font-face {
+  font-family: "Comfortaa";
+  src: url("fonts/Comfortaa-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "DoHyeon";
+  src: url("fonts/DoHyeon-Regular.ttf");
+}
+@font-face {
+  font-family: "FredokaOne";
+  src: url("fonts/FredokaOne-Regular.ttf");
+}
+@font-face {
+  font-family: "Jua";
+  src: url("fonts/Jua-Regular.ttf");
+}
+@font-face {
+  font-family: "Kenia";
+  src: url("fonts/Kenia-Regular.ttf");
+}
+@font-face {
+  font-family: "LilitaOne";
+  src: url("fonts/LilitaOne-Regular.ttf");
+}
+@font-face {
+  font-family: "NanumGothic";
+  src: url("fonts/NanumGothic-Regular.ttf");
+}
+@font-face {
+  font-family: "NanumMyeongjo";
+  src: url("fonts/NanumMyeongjo-Regular.ttf");
+}
+@font-face {
+  font-family: "NotoSansKR";
+  src: url("fonts/NotoSansKR-Regular.otf");
+}
+@font-face {
+  font-family: "NotoSerifKR";
+  src: url("fonts/NotoSerifKR-Regular.otf");
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url("fonts/OpenSans-VariableFont_wdth,wght.ttf");
+}
+@font-face {
+  font-family: "PassionOne";
+  src: url("fonts/PassionOne-Regular.ttf");
+}
+@font-face {
+  font-family: "PoiretOne";
+  src: url("fonts/PoiretOne-Regular.ttf");
+}
+@font-face {
+  font-family: "PressStart2P";
+  src: url("fonts/PressStart2P-Regular.ttf");
 }
 @font-face {
   font-family: "Righteous";
-  src: url("Righteous-Regular.ttf");
+  src: url("fonts/Righteous-Regular.ttf");
+}
+@font-face {
+  font-family: "RobotoCondensed";
+  src: url("fonts/RobotoCondensed-Regular.ttf");
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: "Unbounded";
+  src: url("fonts/Unbounded-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "UnicaOne";
+  src: url("fonts/UnicaOne-Regular.ttf");
 }

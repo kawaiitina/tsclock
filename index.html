@@ -8,15 +8,91 @@
     <title>tsclock</title>
   </head>
   <body>
-    <div id="container">
-      <div id="clock">
-        <div id="hour">12</div>
-        <div id="colon">:</div>
-        <div id="minute">34</div>
+    <div id="app">
+      <div
+        id="container"
+        :style="{fontFamily: clockFontFamily, fontSize: `${clockFontSize}vw`}"
+      >
+        <div id="clock" ref="clock">
+          <div id="hour">{{hours}}</div>
+          <div
+            id="colon"
+            :class="colonVisibility ? '' : 'transparent'"
+            ref="colon"
+          >
+            :
+          </div>
+          <div id="minute">{{minutes}}</div>
+        </div>
+        <div
+          id="date"
+          ref="date"
+          :style="{fontFamily: dateFontFamily, fontSize: `${dateFontSize}vw`}"
+        >
+          {{formattedDate}}
+        </div>
       </div>
-      <div id="date">1997년 3월 14일 금요일</div>
+      <div id="settings" ref="settings" v-if="!fullScreen">
+        <button id="fullscreen-button" @click="requestFullScreen">
+          전체화면
+        </button>
+        <p class="font-2x">시계 글꼴 선택</p>
+        <label
+          v-for="font in fonts"
+          :style="{fontFamily: font}"
+          class="clock-font-label"
+        >
+          <input
+            type="radio"
+            name="clock-font"
+            @change="changeClockFontFamily(font)"
+          />0123456789 12:34 {{font}}
+        </label>
+        <label
+          >시계 크기<input
+            id="clock-font-size"
+            type="number"
+            v-model="clockFontSize"
+            @change="changeClockFontSize"
+            min="1"
+        /></label>
+        <label
+          >콜론 위치<input
+            id="clock-font-size"
+            type="number"
+            v-model="colonPosition"
+            @change="changeColonPosition"
+            step="0.1"
+        /></label>
+        <label>
+          <input type="checkbox" v-model="colonBlink" />콜론(:) 깜빡임
+        </label>
+        <hr />
+
+        <p class="font-2x">날짜 글꼴 선택</p>
+        <label
+          v-for="font in fonts"
+          :style="{fontFamily: font}"
+          class="clock-font-label"
+        >
+          <input
+            type="radio"
+            name="clock-font"
+            @change="changeDateFontFamily(font)"
+          />0123456789 12:34 {{font}}
+        </label>
+        <label
+          >날짜 크기<input
+            id="clock-font-size"
+            type="number"
+            v-model="dateFontSize"
+            @change="changeDateFontSize"
+            min="1"
+            step="0.1"
+        /></label>
+      </div>
     </div>
-    <button id="fullscreen-button">전체화면</button>
-    <script src="main.js"></script>
+    <script src="js/vue@2.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
