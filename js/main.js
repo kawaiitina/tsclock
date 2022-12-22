@@ -56,23 +56,23 @@ const app = new Vue({
   },
   methods: {
     changeClockFontFamily(font) {
-      this.$refs.clock.style.fontFamily = font;
+      this.clockFontFamily = font;
       this.save();
     },
     changeClockFontSize(size) {
-      this.$refs.clock.style.fontSize = size;
+      this.clockFontSize = size;
       this.save();
     },
     changeDateFontFamily(font) {
-      this.$refs.date.style.fontFamily = font;
+      this.dateFontFamily = font;
       this.save();
     },
     changeDateFontSize(size) {
-      this.$refs.date.style.fontSize = size;
+      this.dateFontSize = size;
       this.save();
     },
-    changeColonPosition() {
-      this.$refs.colon.style.transform = `translateY(${this.colonPosition}vw)`;
+    changeColonPosition(pos) {
+      this.colonPosition = Math.round(pos * 10) / 10;
       this.save();
     },
     requestFullScreen() {
@@ -93,10 +93,10 @@ const app = new Vue({
         JSON.stringify({
           clockFontFamily: this.clockFontFamily,
           clockFontSize: this.clockFontSize,
-          colonPosition: this.colonPosition,
-          colonBlink: this.colonBlink,
           dateFontFamily: this.dateFontFamily,
           dateFontSize: this.dateFontSize,
+          colonPosition: this.colonPosition,
+          colonBlink: this.colonBlink,
         })
       );
     },
